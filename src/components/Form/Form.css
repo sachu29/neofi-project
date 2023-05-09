@@ -1,0 +1,261 @@
+.form-wrapper {
+    width: 100%;
+    position: relative;
+    background: black;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    position: relative;
+    width: 470px;
+    background: #0B0819;
+    padding: 80px 40px 48px;
+    border-radius: 30px;
+    border: 1px solid #e8e8e8;
+    margin-top: 50px;
+}
+
+.form::after {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: -35px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #1C1731;
+    border-radius: 50%;
+    background-image: url(../../assets/CompassLogo.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.form::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: black;
+    border-bottom: 3px solid #e8e8e8;
+    top: -45px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+}
+
+label {
+    color: #C5C5C5;
+    margin-bottom: 24px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+.input-section:last-child {
+    margin-bottom: 50px;
+}
+
+.input-section:first-child label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+select {
+    width: 100%;
+    position: relative;
+    height: 40px;
+    padding: 18px 25px;
+    border-radius: 10px;
+    background: #1C1731;
+    background-image: url(../../assets/CompassLogo.svg);
+    outline: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 18px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+option {
+    height: 40px;
+    padding: 18px 25px;
+    border-radius: 10px;
+    background: #1C1731;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 18px 25px;
+    border-radius: 10px;
+    background: #1C1731;
+    color: #C5C5C5;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+.buy-btn {
+    width: 100%;
+}
+
+.current-value {
+    display: block;
+    width: 30%;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: right;
+    color: #627EEA;
+}
+
+.inr {
+    position: relative;
+}
+
+.inr::after {
+    content: 'INR';
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+/* Modal Pop-up */
+
+.modal-wrapper {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background-color: rgba(black, black, black, 0.5); */
+    background-color: black;
+    /* opacity: 0.5; */
+    z-index: 5;
+}
+
+.modal {
+    width: 410px;
+    padding: 12px;
+    color: white;
+    background: #181627;
+    border-radius: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* .modal::before {
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+} */
+
+.modal__close {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    padding: 7px;
+    background: rgba(110, 86, 248, 0.15);
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Input section */
+
+.modal__input-section {
+    margin-top: 30px;
+    padding: 20px 33px;
+}
+
+/* Serach bar */
+
+.modal__search--bar {
+    width: 100%;
+    height: 40px;
+    color: #D2D2D2;
+    border: 1px solid #6E56F840;
+    background-color: #181627;
+    border-radius: 30px;
+    padding: 10px 10px 10px 44px;
+}
+
+.modal__search--bar::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #D2D2D2;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.modal__search--icon {
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    z-index: 1;
+
+}
+
+/* List Section */
+.modal__list-item {
+    position: relative;
+}
+
+.modal__list-menu {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: #1B192D;
+    border-radius: 2px;
+    margin-top: 16px;
+}
+
+.modal__list-menu--logo {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.modal__list-menu--company-name {
+    width: 60%;
+    margin-left: 44px;
+}
+
+.modal__list-menu--active {
+    position: absolute;
+    right: 16px;
+}
